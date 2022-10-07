@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>User Registration</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="script/script.js"></script>
+</head>
+<body>
+<form action="index.php" method="get" target="_blank">
+
+  <table>
+    <tr>
+      <td>
+        <label for="firstNameInput" class="label tableItems">First Name:</label>
+      </td>
+      <td>
+        <input type="text" id="firstNameInput" name="input1" onfocusout="validateForm('firstNameInput');"/><br/>
+      </td>
+      <td><div id="firstNameInputErrorText"></div></td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="lastNameInput" class="label tableItems">Last Name:</label>
+      </td>
+      <td>
+        <input type="text" id="lastNameInput" name="input2" onfocusout="validateForm('lastNameInput');"/><br/>
+      </td>
+      <td><div id="lastNameInputErrorText"></div></td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="usernameInput" class="label tableItems">Username:</label>
+      </td>
+      <td>
+        <input type="text" id="usernameInput" name="input7" onfocusout="validateForm('usernameInput');"/><br/>
+      </td>
+      <td><div id="usernameInputErrorText"></div></td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="emailInput" class="label tableItems">Email:</label>
+      </td>
+      <td>
+        <input type="email" id="emailInput" name="input4" onfocusout="validateForm('emailInput');"/><br/>
+      </td>
+      <td><div id="emailInputErrorText"></div></td>
+    </tr>
+
+    <tr>
+    <td>
+      <label for="passwordInput" >Password:</label>
+    </td>
+    <td>
+      <input type="password" id="passwordInput" name="input3" onfocusout="validateForm('passwordInput');"/><br/>
+    </td>
+      <td><div id="passwordInputErrorText"></div></td>
+  </tr>
+
+    <tr>
+      <td>
+        <label for="passwordConfirmInput">ConfirmPassword:</label>
+      </td>
+      <td>
+        <input type="password" id="passwordConfirmInput" name="input6" onfocusout="validateForm('passwordConfirmInput');"/><br/>
+      </td>
+      <td><div id="passwordConfirmInputErrorText"></div></td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="fileInput" >Profile picture:</label>
+      </td>
+      <td>
+        <input type="file" id="fileInput" name="input5"/><br/>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>
+      <input type="radio" id="sexInput1" name="sex" onclick="validateRadio('sex');"/>
+      <label for="sexInput1">Female</label><br/>
+      <input type="radio" id="sexInput2" name="sex" onclick="validateRadio('sex');"/>
+      <label for="sexInput2">Male</label><br/>
+      <input type="radio" id="sexInput3" name="sex" onclick="validateRadio('sex');"/>
+      <label for="sexInput3">Other</label><br/>
+      </td>
+      <td><div id="sexErrorText"></div></td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="fileInput">About yourself:</label>
+      </td>
+      <td>
+        <textarea id="aboutYouInput" name="txt1" onfocusout="validateForm('aboutYouInput');"></textarea><br/>
+      </td>
+      <td><div id="aboutYouInputErrorText"></div></td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="checkbox" id="subscribeNews" name="chk1"/>
+        <label for="subscribeNews">Subscribe to newsletter</label><br/>
+      </td>
+
+    </tr>
+
+  </table>
+
+
+  <button type="submit" id="submitForm" name="submit1" class="button">Submit the Data</button>
+  <button type="reset" id="resetForm" name="reset1" class="button" onclick="resetFormAll();">Reset the Data</button><br/>
+  <input type="button" value="Validate ME!" class="button" onclick="validateFormAll();"/> <br/>
+  <div id="errorText">
+
+  </div>
+</form>
+</body>
+</html>
