@@ -53,4 +53,7 @@ public class Person {
         age++;
     }
 
+    public boolean isHungry() {
+        return false;
+    }
 }

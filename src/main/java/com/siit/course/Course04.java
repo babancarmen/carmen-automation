@@ -131,7 +131,7 @@ public class Course04 {
         );
         car1.accelerate();
         car1.paintCar(Color.BLUE);
-        System.out.println("Car " + car1.model + " with brand " + car1.brand.name);
+        //System.out.println("Car " + car1.model + " with brand " + car1.brand.name);
 
     }
 

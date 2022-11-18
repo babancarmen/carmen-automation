@@ -2,8 +2,8 @@ package com.siit.course;
 
 public class Rectangle {
 
-    int height;
-    int width;
+    private int height;
+    private int width;
 
     public Rectangle(int height, int width) {
         this.height = height;
@@ -11,12 +11,20 @@ public class Rectangle {
     }
 
     public Rectangle() {
-        height = 1 ;
+        height = 1;
         width = 1;
     }
 
-    public Rectangle (int h) {
+    public Rectangle(int h) {
         height = h;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
     }
 
     public int computeArea() {
@@ -24,7 +32,7 @@ public class Rectangle {
     }
 
     public int computePerimeter() {
-        return 2 * ( height + width);
+        return 2 * (height + width);
     }
 
     public double computeDiagonal() {
@@ -36,4 +44,5 @@ public class Rectangle {
         System.out.println("Perimeter is " + computePerimeter());
         System.out.println("Diagonal is " + computeDiagonal());
     }
+
 }

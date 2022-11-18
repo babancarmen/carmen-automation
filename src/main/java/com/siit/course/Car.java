@@ -1,16 +1,20 @@
 package com.siit.course;
 
-import java.awt.*;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.awt.*;
+@Getter
+@Setter
 public class Car {
 
     private final float ACC_STEP = 5;
-    CarBrands brand;
-    String model;
-    Color color;
-    String fuelType;
+    private CarBrands brand;
+    private String model;
+    private Color color;
+    private String fuelType;
     boolean isNew;
-    String vin;
+    private String vin;
     private float currentSpeed;
 
     public Car(CarBrands brand, String model, Color color, String fuelType, boolean isNew, String vin) {
